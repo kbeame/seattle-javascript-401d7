@@ -12,8 +12,11 @@ demoApp.config(['$routeProvider', function($rp) {
       controller: 'BearsController',
       controllerAs: 'bearsctrl'
     })
-    // AUTH_EXP: how do the signin/up routes differ and what is their relationship
-    // with one another
+    // AUTH_EX: how do the signin/up routes differ and what is their relationship
+    
+    // Both signing and signup routes use the same auth_view template but the view differs depending on whether
+    // authctrl.signup is equal to true (aka whether one needs to sign-up).
+    // If it is then the header for the page differ in the same manner that the form button does.
     .when('/signup', {
       templateUrl: 'templates/auth/views/auth_view.html',
       controller: 'SignUpController',
